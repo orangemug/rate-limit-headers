@@ -1,6 +1,7 @@
 # rate-limit-headers
 Parse / unparse `X-RateLimit-*` headers, converting times to milliseconds rather than unix epoch (seconds)
 
+![stability-experimental](https://img.shields.io/badge/stability-experimental-orange.svg)
 [![circleci](https://circleci.com/gh/teamguideio/rate-limit-headers.png?style=shield)](https://circleci.com/gh/teamguideio/rate-limit-headers)
 [![Dependency Status](https://david-dm.org/teamguideio/rate-limit-headers.svg)](https://david-dm.org/teamguideio/rate-limit-headers)
 [![Dev Dependency Status](https://david-dm.org/teamguideio/rate-limit-headers/dev-status.svg)](https://david-dm.org/teamguideio/rate-limit-headers#info=devDependencies)
