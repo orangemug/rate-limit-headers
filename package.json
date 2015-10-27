@@ -1,6 +1,6 @@
 {
   "name": "rate-limit-headers",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "scripts": {
     "test": "mocha test/index.js"
   },
