@@ -24,6 +24,8 @@ var mappings = [
 module.exports = {
   parse: function(headers) {
     var obj = {};
+    headers = headers || {};
+
     mappings.forEach(function(item) {
       var val = headers[item.header];
 
@@ -37,6 +39,8 @@ module.exports = {
   },
   unparse: function(obj) {
     var headers = {};
+    obj = obj || {};
+
     mappings.forEach(function(item) {
       var val = obj[item.key];
 
