@@ -21,15 +21,22 @@ To install
 ## Usage
 To parse just pass `res.headers` from http/express
 
-    var rateLimitHeaders = require("rate-limit-headers");
-    rateLimitHeaders.parse(res.headers)
-    /**
-      * {
-      *   limit: 100,
-      *   remaining: 99,
-      *   reset: 1445375864000
-      * }
-      */
+```js
+var rateLimitHeaders = require("rate-limit-headers");
+
+var headers = {
+  "X-RateLimit-Limit": 100,
+  "X-RateLimit-Remaining": 99,
+  "X-RateLimit-Reset": 1445375864
+};
+
+var headerObj = rateLimitHeaders.parse(headers);
+assert.deepEqual(headerObj, {
+  limit: 100,
+  remaining: 99,
+  reset: 1445375864000
+});
+```
 
 `unparse` just reverses the process.
 

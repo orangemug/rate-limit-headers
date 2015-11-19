@@ -5,6 +5,7 @@
     "test": "mocha test/index.js"
   },
   "dependencies": {
-    "mocha": "^2.3.3"
+    "mocha": "^2.3.3",
+    "readme-tester": "git://github.com/orangemug/readme-tester.git#v0.3.0"
   }
 }

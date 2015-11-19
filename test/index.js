@@ -1,5 +1,6 @@
 var assert = require("assert");
 var rateLimitHeaders = require("../");
+var readmeTester = require("readme-tester");
 
 describe("rate-limit-headers", function() {
 
@@ -28,6 +29,13 @@ describe("rate-limit-headers", function() {
       "X-RateLimit-Limit": 1010,
       "X-RateLimit-Remaining": 1009,
       "X-RateLimit-Reset": 1445375564
+    });
+  });
+
+  it("README should show no errors", function(done) {
+    readmeTester(__dirname+"/../", function(err) {
+      assert.ifError(err);
+      done();
     });
   });
 
